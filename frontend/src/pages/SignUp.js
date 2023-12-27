@@ -32,7 +32,7 @@ export default function SignUpForm(){
     }
     return(
         <form className='form-signup' onSubmit={handleSubmit}>
-            <h1 className='signin-text'>SIGN UP</h1>            
+            <h1 className='signin-text'>SIGN UP</h1>
             <div className="flex">
                 <div>
                     <h3 className="form-element">FIRST NAME</h3>

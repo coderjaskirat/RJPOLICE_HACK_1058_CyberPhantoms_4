@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css'
 import App from './App.js'
 import SignUp from './pages/SignUp.js'
 import Index from './pages/Index.js'

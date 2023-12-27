@@ -1,0 +1,76 @@
+/* colour pallete
+#02005A dark blue
+#C1A554 yellow
+#530000 maroon
+#020070 blue */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap');
+
+*{
+    
+    margin: 0;
+    padding: 0;
+}
+
+.App{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar{
+    background-color: #530000;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    margin-left: 30px;
+}
+
+.nav-heading{
+    font-family: 'Kalnia', serif;
+    font-weight: 500;
+    color: #C1A554;
+    font-size: 25px;
+}
+
+.tagline{
+    color: #C1A554;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.signin-button{
+    color: #C1A554;
+    text-decoration: none;
+    font-size: 25px;
+    border: 3px solid #C1A554 ;
+    border-radius: 30px;
+    padding: 5px 30px;
+    margin-right: 30px;
+    font-weight: 500;
+}
+
+.nav-menu{
+    background-color: #020070;
+}
+
+.nav-list{
+    list-style: none;
+    color: #C1A554;
+    height: 60px;
+    display: flex;
+    /* justify-content: flex-start; */
+    align-items: center;
+    margin-left: 30px;
+    font-weight: 600;
+}
+
+.nav-link{
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+/********************* About ***********************/
+

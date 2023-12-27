@@ -24,7 +24,7 @@ export default function About(){
                     <p>Details about Member 2</p>
                 </div>
                 <div className="member">
-]                    <h3>Member 3</h3>
+                    <h3>Member 3</h3>
                     <p>Details about Member 3</p>
                 </div>
                 <div className="member">

@@ -20,12 +20,12 @@ export default function SignUpForm(){
     }
     return(
         <form className='form-signup' onSubmit={handleSubmit}>
-            <h1 className='signin-text'>SIGN IN</h1>
-            <h3 className="form-element">Police_Id</h3>
+            <h2 className='signin-text'>SIGN IN</h2>
+            <p className="form-element">Police_Id</p>
             <input className="form-element-input" type="text" onChange={handleChange} value={Formdata.Police_Id} id="usersname" name="Police_Id" placeholder='Enter Police_Id'/><br/>
-            <h3 className="form-element">Password</h3>
+            <p className="form-element">Password</p>
             <input className="form-element-input" type="password" onChange={handleChange} value={Formdata.PassWord} id='pass' name="PassWord" placeholder='Enter Password'/>
-            <p>New User?  <Link to="/SignUp">Register</Link></p>
+            <p>No account?  <Link to="/SignUp">Create account</Link></p>
             <Link className="login-button" to="/Index">Login</Link>
         </form>
     )
