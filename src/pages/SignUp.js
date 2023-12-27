@@ -3,14 +3,16 @@ import {Link} from "react-router-dom"
 
 export default function SignUpForm(){
     const [Formdata, setFormdata] = React.useState({
-        UserName: "",
+        FirstName: "",
+        LastName: "",
         Email: "",
         MobileNo: '' ,
         PassWord: "",
-        ConfirmPassword: ""
+        ConfirmPassword: "",
+        AadharNo: ''
     });
     function handleChange(event){
-        if (event.target.name === 'MobileNo') {
+        if (event.target.name === 'MobileNo' || event.target.name === 'AadharNo') {
             const numericValue = event.target.value.replace(/\D/g, '');
             setFormdata((prev => {return{
             ...prev, [event.target.name]: numericValue
@@ -31,18 +33,28 @@ export default function SignUpForm(){
     return(
         <form className='form-signup' onSubmit={handleSubmit}>
             <h1 className='signin-text'>SIGN UP</h1>            
-            <h2 className="form-element">Username</h2>
-            <input className="form-element-input" type="text" onChange={handleChange} value={Formdata.UserName} id="usersname" name="UserName" placeholder='Enter UserName'/><br/>
-            <h2 className="form-element">Mobile Number</h2>
-            <input className="form-element-input" type="tel" onChange={handleChange} value={Formdata.MobileNo} id="MobileNo" name="MobileNo" placeholder='Enter Mobile Number'/><br/>
-            <h2 className="form-element">Email</h2>
-            <input className="form-element-input" type="email" onChange={handleChange} value={Formdata.Email} id="email" name="Email" placeholder='Enter Email'/><br/>
-            <h2 className="form-element">Password</h2>
-            <input className="form-element-input" type="password" onChange={handleChange} value={Formdata.PassWord} id='pass' name="PassWord" placeholder='Enter Password'/>
-            <h2 className="form-element">Confirm Password</h2>
-            <input className="form-element-input" type="password" onChange={handleChange} value={Formdata.ConfirmPassword} id='pass' name="ConfirmPassword" placeholder='Password'/>
+            <div className="flex">
+                <div>
+                    <h3 className="form-element">FIRST NAME</h3>
+                    <input className="form-element-input" type="text" onChange={handleChange} value={Formdata.FirstName} id="firstname" name="firstname" placeholder=''/><br/>
+                </div>
+                <div>
+                    <h3 className="form-element">LAST NAME</h3>
+                    <input className="form-element-input" type="text" onChange={handleChange} value={Formdata.LastName} id="lastname" name="lastname" placeholder=''/><br/>
+                </div>
+            </div>
+            <h3 className="form-element">EMAIL ID</h3>
+            <input className="form-element-input" type="email" onChange={handleChange} value={Formdata.Email} id="email" name="Email" placeholder=''/><br/>
+            <h3 className="form-element">PASSWORD</h3>
+            <input className="form-element-input" type="password" onChange={handleChange} value={Formdata.PassWord} id='pass' name="PassWord" placeholder=''/>
+            <h3 className="form-element">CONFIRM PASSWORD</h3>
+            <input className="form-element-input" type="password" onChange={handleChange} value={Formdata.ConfirmPassword} id='pass' name="ConfirmPassword" placeholder=''/>
+            <h3 className="form-element">MOBILE NUMBER</h3>
+            <input className="form-element-input" type="tel" onChange={handleChange} value={Formdata.MobileNo} id="MobileNo" name="MobileNo" placeholder=''/><br/>
+            <h3 className="form-element">AADHAR NUMBER</h3>
+            <input className="form-element-input" type="tel" onChange={handleChange} value={Formdata.AadharNo} id="AadharNo" name="AadharNo" placeholder=''/><br/>
             <p>Already a member?  <Link to="/">Log In</Link></p>
-            <Link className="login-button" to="/Index">Register</Link>
+            <Link className="login-button" to="/Index">CREATE ACCOUNT</Link>
         </form>
     )
 }
